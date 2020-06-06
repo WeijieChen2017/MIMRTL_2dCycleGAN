@@ -45,7 +45,7 @@ def slice5_AB(dataA, dataB, name_dataset, n_slice=1, name_tag="", resize_f=1):
 
 def slice5_A(dataA, name_dataset, n_slice=1, name_tag="", resize_f=1, folderName='test'):
     # shape supposed to be 512*512*284 by default
-    path2save = "./pytorch-CycleGAN-and-pix2pix/datasets/"+name_dataset+'/'+folderName
+    path2save = "./pytorch-CycleGAN-and-pix2pix/datasets/"+name_dataset+'/'+folderName+'/'
     h, w, z = dataA.shape
     h = h*resize_f
     w = w*resize_f
