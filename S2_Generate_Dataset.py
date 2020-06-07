@@ -14,15 +14,19 @@ def maxmin_norm(data):
     data = (data - MIN)/(MAX-MIN)
     return data
 
-def create_index(dataA, n_slice):
+def create_index(dataA, n_slice, zeroPadding=False):
     h, w, z = dataA.shape
     index = np.zeros((z,n_slice))
     
     for idx_z in range(z):
         for idx_c in range(n_slice):
             index[idx_z, idx_c] = idx_z-(n_slice-idx_c+1)+n_slice//2+2
-    index[index<0]=0
-    index[index>z-1]=z-1
+    if zeroPadding:
+        index[index<0]=z
+        index[index>z-1]=z
+    else:
+        index[index<0]=0
+        index[index>z-1]=z-1
     return index
 
 def slice5_AB(dataA, dataB, name_dataset, n_slice=1, name_tag="", resize_f=1):
@@ -50,7 +54,9 @@ def slice5_A(dataA, name_dataset, n_slice=1, name_tag="", resize_f=1, folderName
     h = h*resize_f
     w = w*resize_f
     img = np.zeros((n_slice, h, w))
-    index = create_index(dataA, n_slice)
+    index = create_index(dataA, n_slice, zeroPadding=True)
+    dataA = np.concatenate((dataA, np.zeros(h,w,1)), axis=2)
+    print(dataA.shape)
         
     for idx_z in range(z):
         for idx_c in range(n_slice):
