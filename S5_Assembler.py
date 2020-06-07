@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 
 from scipy.ndimage import zoom
 
-name_dataset = "sk8R"
+name_dataset = "sk8R_zeroPadding"
 resize_f = 1
 n_slice = 7
 # test_folder = "testB"
