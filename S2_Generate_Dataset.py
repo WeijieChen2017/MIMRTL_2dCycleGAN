@@ -54,7 +54,7 @@ def slice5_A(dataA, name_dataset, n_slice=1, name_tag="", resize_f=1, folderName
     h = h*resize_f
     w = w*resize_f
     img = np.zeros((n_slice, h, w))
-    index = create_index(dataA, n_slice, zeroPadding=True)
+    index = create_index(dataA, n_slice, zeroPadding=False)
     emptySlice = np.zeros((h,w,1))
     dataA = np.concatenate((dataA, emptySlice), axis=2)
     print(dataA.shape)
