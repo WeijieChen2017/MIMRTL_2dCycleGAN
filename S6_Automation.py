@@ -6,7 +6,7 @@ def main():
         epilog="""All's well that ends well.""")
 
 	parser.add_argument('--suffixes', metavar='', type=str, default="vanilla",
-	                        help='Suffixes for the current model.(vanilla)<str>')
+	                    help='Suffixes for the current model.(vanilla)<str>')
 	parser.add_argument('--lr', metavar='', type=float, default=0.0002,
                         help='Learning rate(0.0002)<float>')
 
