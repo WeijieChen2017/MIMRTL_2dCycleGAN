@@ -5,9 +5,9 @@ def main():
         description='''This is a beta script for Partial Volume Correction in PET/MRI system. ''',
         epilog="""All's well that ends well.""")
 
-	parser.add_argument('--suffixes', metavar='', type=str, default="vanilla",
-	                    help='Suffixes for the current model.(vanilla)<str>')
-	parser.add_argument('--lr', metavar='', type=float, default=0.0002,
+    parser.add_argument('--suffixes', metavar='', type=str, default="vanilla",
+                        help='Suffixes for the current model.(vanilla)<str>')
+    parser.add_argument('--lr', metavar='', type=float, default=0.0002,
                         help='Learning rate(0.0002)<float>')
 
 
@@ -77,12 +77,12 @@ def main():
     command_0 = "cd pytorch-CycleGAN-and-pix2pix"
     os.system(command_0)
     command_1 = "cp checkpoints/sk8R_" + args.suffixes + "/latest_net_G_B.pth "/
-    			+ "checkpoints/sk8R_" + args.suffixes + "/lateset_net_G.pth"
+                + "checkpoints/sk8R_" + args.suffixes + "/lateset_net_G.pth"
     os.system(command_1)
     command_2 = "test.py --dataroot ./datasets/sk8R --model test --name sk8R_vanilla --dataset_mode single --num_test 300 --input_nc 7 --output_nc 7 --no_dropout --netG unet_512 --norm instance"
-	os.system(command_2)
+    os.system(command_2)
     command_3 = "cd .."
-	os.system(command_3)
+    os.system(command_3)
     command_4 = "python S5_Assembler.py"
     os.system(command_4)
 
