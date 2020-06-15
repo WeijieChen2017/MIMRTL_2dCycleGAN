@@ -80,7 +80,7 @@ def main():
     print(command_0)
     os.chdir(command_0)
 
-    command_1 = "cp checkpoints/sk8R_" + args.suffixes + "/latest_net_G_B.pth " + "checkpoints/sk8R_" + args.suffixes + "/latest_net_G.pth"
+    command_1 = "cp checkpoints/sk8R_" + args.suffixes + "/10_net_G_B.pth " + "checkpoints/sk8R_" + args.suffixes + "/latest_net_G.pth"
     print("------------------------")
     print(command_1)
     os.system(command_1)
