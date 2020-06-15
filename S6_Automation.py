@@ -100,5 +100,11 @@ def main():
     print(command_4)
     os.system(command_4)
 
+    command_5 = "cp ./subj01_pet_sk8R_" + args.suffixes + "_fake.nii ~/" + args.suffixes + ".nii"
+    print("------------------------")
+    print(command_5)
+    os.system(command_5)
+
+
 if __name__ == "__main__":
     main()
