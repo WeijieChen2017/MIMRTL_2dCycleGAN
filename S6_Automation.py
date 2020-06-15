@@ -63,16 +63,16 @@ def main():
     args = parser.parse_args()
 
 
-    model_name = args.model_name
-    dataset_folder_name = args.dataset_folder_name
+    # model_name = args.model_name
+    # dataset_folder_name = args.dataset_folder_name
 
-    dir_mri = os.path.join("data", args.dir_mri + '.nii')
-    dir_pet = os.path.join("data", args.dir_pet + '.nii')
+    # dir_mri = os.path.join("data", args.dir_mri + '.nii')
+    # dir_pet = os.path.join("data", args.dir_pet + '.nii')
 
-    time_stamp = datetime.datetime.now().strftime("-%Y-%m-%d-%H-%M")
-    model_id = args.id + time_stamp
-    enhance_blur = args.enhance_blur
-    gbl_set_value("depth", args.depth)
+    # time_stamp = datetime.datetime.now().strftime("-%Y-%m-%d-%H-%M")
+    # model_id = args.id + time_stamp
+    # enhance_blur = args.enhance_blur
+    # gbl_set_value("depth", args.depth)
 
     command_0 = "cd pytorch-CycleGAN-and-pix2pix"
     os.system(command_0)
