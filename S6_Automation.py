@@ -75,10 +75,10 @@ def main():
     # enhance_blur = args.enhance_blur
     # gbl_set_value("depth", args.depth)
 
-    command_0 = "cd pytorch-CycleGAN-and-pix2pix"
+    command_0 = "pytorch-CycleGAN-and-pix2pix"
     print("------------------------")
     print(command_0)
-    os.system(command_0)
+    os.chdir(command_0)
 
     command_1 = "cp checkpoints/sk8R_" + args.suffixes + "/latest_net_G_B.pth " + "checkpoints/sk8R_" + args.suffixes + "/lateset_net_G.pth"
     print("------------------------")
@@ -90,10 +90,10 @@ def main():
     print(command_2)
     os.system(command_2)
 
-    command_3 = "cd .."
+    command_3 = ".."
     print("------------------------")
     print(command_3)
-    os.system(command_3)
+    os.chdir(command_3)
 
     command_4 = "python S5_Assembler.py"
     print("------------------------")
