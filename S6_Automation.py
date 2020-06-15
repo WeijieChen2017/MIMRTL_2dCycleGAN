@@ -75,11 +75,6 @@ def main():
     # enhance_blur = args.enhance_blur
     # gbl_set_value("depth", args.depth)
 
-    command_0 = "pytorch-CycleGAN-and-pix2pix"
-    print("------------------------")
-    print(command_0)
-    os.chdir(command_0)
-
     command_1 = "cp checkpoints/sk8R_" + args.suffixes + "/latest_net_G_B.pth " + "checkpoints/sk8R_" + args.suffixes + "/lateset_net_G.pth"
     print("------------------------")
     print(command_1)
@@ -99,6 +94,11 @@ def main():
     print("------------------------")
     print(command_4)
     os.system(command_4)
+
+    command_0 = "pytorch-CycleGAN-and-pix2pix"
+    print("------------------------")
+    print(command_0)
+    os.chdir(command_0)
 
 if __name__ == "__main__":
     main()
