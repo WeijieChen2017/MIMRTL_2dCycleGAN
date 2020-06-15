@@ -76,8 +76,7 @@ def main():
 
     command_0 = "cd pytorch-CycleGAN-and-pix2pix"
     os.system(command_0)
-    command_1 = "cp checkpoints/sk8R_" + args.suffixes + "/latest_net_G_B.pth "/
-                + "checkpoints/sk8R_" + args.suffixes + "/lateset_net_G.pth"
+    command_1 = "cp checkpoints/sk8R_" + args.suffixes + "/latest_net_G_B.pth " + "checkpoints/sk8R_" + args.suffixes + "/lateset_net_G.pth"
     os.system(command_1)
     command_2 = "test.py --dataroot ./datasets/sk8R --model test --name sk8R_vanilla --dataset_mode single --num_test 300 --input_nc 7 --output_nc 7 --no_dropout --netG unet_512 --norm instance"
     os.system(command_2)
