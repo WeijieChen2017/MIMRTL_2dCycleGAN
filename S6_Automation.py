@@ -85,7 +85,7 @@ def main():
     print(command_1)
     os.system(command_1)
 
-    command_2 = "test.py --dataroot ./datasets/sk8R --model test --name sk8R_vanilla --dataset_mode single --num_test 300 --input_nc 7 --output_nc 7 --no_dropout --netG unet_512 --norm instance"
+    command_2 = "python test.py --dataroot ./datasets/sk8R --model test --name sk8R_vanilla --dataset_mode single --num_test 300 --input_nc 7 --output_nc 7 --no_dropout --netG unet_512 --norm instance"
     print("------------------------")
     print(command_2)
     os.system(command_2)
