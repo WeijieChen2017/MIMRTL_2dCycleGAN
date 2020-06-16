@@ -66,7 +66,7 @@ def slice5_A(dataA, name_dataset, n_slice=1, name_tag="", resize_f=1, folderName
         np.save(name2save, img)
     print(str(z)+" images have been saved.")
 
-name_dataset = "sk8R"
+name_dataset = "sk8R_721"
 n_slice = 7
 
 import os
@@ -96,7 +96,7 @@ for path_ori in list_ori:
     filename_ori = filename_ori[:filename_ori.find(".")]
     print(filename_ori)
     data_ori = maxmin_norm(nib.load(path_ori).get_fdata())
-    slice5_A(dataA=data_ori, name_dataset=name_dataset, n_slice=n_slice, 
+    slice5_A(dataA=data_ori, name_dataset=name_dataset, n_slice=1, 
              name_tag=filename_ori, resize_f = 1, folderName='trainA')
     print("------------------------------------------------------------------------")
 
