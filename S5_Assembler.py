@@ -35,6 +35,7 @@ for path_ori in list_ori:
 #         img = cv2.resize(np.asarray(plt.imread(path_fake)), dsize=(nii_data.shape[0], nii_data.shape[1]), interpolation=cv2.INTER_CUBIC)
         img = np.squeeze(np.load(path_fake))
         img[img<0] = 0
+        print(idx)
         print(img.shape)
         print(pred_fake.shape)
         if n_slice == 1:
