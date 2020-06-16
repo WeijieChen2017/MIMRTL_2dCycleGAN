@@ -13,7 +13,7 @@ n_slice = 1
 # test_folder = "testB"
 
 # list_ori = glob.glob("./data/"+name_dataset+"/test/*.nii")
-list_ori = glob.glob("./data/sk8R/test/*.nii")
+list_ori = glob.glob("./data/sk8R_721/test/*.nii")
 list_ori.sort()
 for path_ori in list_ori:
     print(path_ori)
